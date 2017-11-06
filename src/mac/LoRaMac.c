@@ -1856,7 +1856,7 @@ static void OnRxWindow1TimerEvent( void )
 
 #if defined( USE_BAND_433 ) || defined( USE_BAND_780 ) || defined( USE_BAND_868 )
 
-    printf("1.Frequency=%d,Datarate=%d,Bandwidth=%d,RxWindowTimeout=%d \r\n", Channels[Channel].Frequency, RxWindowsParams[0].Datarate, RxWindowsParams[0].Bandwidth, RxWindowsParams[1].RxWindowTimeout);
+    //printf("1.Frequency=%d,Datarate=%d,Bandwidth=%d,RxWindowTimeout=%d \r\n", Channels[Channel].Frequency, RxWindowsParams[0].Datarate, RxWindowsParams[0].Bandwidth, RxWindowsParams[1].RxWindowTimeout);
 
     RxWindowSetup( Channels[Channel].Frequency, RxWindowsParams[0].Datarate, RxWindowsParams[0].Bandwidth, RxWindowsParams[0].RxWindowTimeout, false );
 #elif defined( USE_BAND_470 )
@@ -1879,7 +1879,7 @@ static void OnRxWindow2TimerEvent( void )
         rxContinuousMode = true;
     }
 
-    printf("2.Frequency=%d,Datarate=%d,Bandwidth=%d,RxWindowTimeout=%d \r\n",LoRaMacParams.Rx2Channel.Frequency, RxWindowsParams[1].Datarate, RxWindowsParams[1].Bandwidth, RxWindowsParams[1].RxWindowTimeout);
+    //printf("2.Frequency=%d,Datarate=%d,Bandwidth=%d,RxWindowTimeout=%d \r\n",LoRaMacParams.Rx2Channel.Frequency, RxWindowsParams[1].Datarate, RxWindowsParams[1].Bandwidth, RxWindowsParams[1].RxWindowTimeout);
 
     if( RxWindowSetup( LoRaMacParams.Rx2Channel.Frequency, RxWindowsParams[1].Datarate, RxWindowsParams[1].Bandwidth, RxWindowsParams[1].RxWindowTimeout, rxContinuousMode ) == true )
     {
